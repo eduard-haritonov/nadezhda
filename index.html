@@ -276,6 +276,34 @@ a:hover { color: var(--c-primary-dark); }
   opacity: 0.55;
 }
 
+/* ---------- Prices ---------- */
+.prices { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.prices__group {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+.prices__group h3 { color: var(--c-primary-dark); margin-bottom: 12px; }
+.prices__sub { color: var(--c-muted); font-size: 0.9rem; margin: -6px 0 12px; }
+.price { width: 100%; border-collapse: collapse; }
+.price td {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 0.93rem;
+  vertical-align: top;
+}
+.price tr:last-child td { border-bottom: 0; }
+.price td:first-child { padding-right: 14px; }
+.price td:last-child {
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--c-primary-dark);
+}
+.prices__note { margin-top: 20px; color: var(--c-muted); font-size: 0.9rem; }
+
 /* ---------- Hours ---------- */
 .hours {
   width: 100%;
@@ -374,6 +402,7 @@ a:hover { color: var(--c-primary-dark); }
   .about__timeline li { grid-template-columns: 1fr; gap: 2px; }
 
   .services { grid-template-columns: 1fr; }
+  .prices { grid-template-columns: 1fr; }
   .contacts { grid-template-columns: 1fr; }
   .contacts__map { min-height: 300px; }
 }
@@ -431,6 +460,7 @@ a:hover { color: var(--c-primary-dark); }
       <nav class="nav" id="nav">
         <a href="#about">О враче</a>
         <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
         <a href="#hours">Режим работы</a>
         <a href="#contacts">Контакты</a>
         <span class="nav__phone">8-913-467-93-01</span>
@@ -551,6 +581,39 @@ a:hover { color: var(--c-primary-dark); }
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <h2 class="section__title">Цены</h2>
+        <div class="prices">
+          <div class="prices__group">
+            <h3>Урология</h3>
+            <table class="price">
+              <tr><td>Первичный приём врача уролога</td><td>1500 руб</td></tr>
+              <tr><td>Первичный приём врача уролога (детский)</td><td>1000 руб</td></tr>
+              <tr><td>Циркумцизия (обрезание) под местной анестезией</td><td>10 000 руб</td></tr>
+              <tr><td>Удаление кондилом, липом, папиллом, атером, невусов, фибром (до 1,0 см) с гистологией под местной анестезией</td><td>2000 руб</td></tr>
+              <tr><td>Удаление кондилом, липом, папиллом, атером, невусов, фибром (более 1,0 см) с гистологией под местной анестезией</td><td>2500 руб</td></tr>
+              <tr><td>Другая урологическая патология</td><td>2500 руб</td></tr>
+              <tr><td>Двусторонняя паравертебральная блокада</td><td>2000 руб</td></tr>
+              <tr><td>Выезд на дом (замена эпицистостомы, внутрисуставное введение препаратов, паравертебральные блокады и т. д.) — без стоимости препаратов и материалов</td><td>1000 руб</td></tr>
+              <tr><td>Гипертермия сверхвысокочастотным током сосудистых новообразований</td><td>2000 руб</td></tr>
+              <tr><td>Карбокситерапия (зона суставов, спины, надлобковой области), 1 сеанс</td><td>1000 руб</td></tr>
+            </table>
+          </div>
+          <div class="prices__group">
+            <h3>Лечение методом УВТ (ударно-волновая терапия)</h3>
+            <p class="prices__sub">Цена за 1 сеанс</p>
+            <table class="price">
+              <tr><td>Лечение эректильной дисфункции</td><td>1500 руб</td></tr>
+              <tr><td>Лечение аденомы простаты 1–2 ст.</td><td>1500 руб</td></tr>
+              <tr><td>Лечение хронического простатита</td><td>1500 руб</td></tr>
+            </table>
+          </div>
+        </div>
+        <p class="prices__note">Цены на плазмотерапию и другие процедуры, а также актуальность цен уточняйте при записи по телефону <strong>8-913-467-93-01</strong></p>
       </div>
     </section>
 
